@@ -18,8 +18,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Link from '@material-ui/core/Link';
 
-import NavBar from './NavBar'
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -43,9 +41,9 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const LinkBehavior = React.forwardRef((props, ref) => (
-    <RouterLink ref={ref} to="/getting-started/installation/" {...props} />
-));
+// const LinkBehavior = React.forwardRef((props, ref) => (
+//     <RouterLink ref={ref} to="/getting-started/installation/" {...props} />
+// ));
 
 export default function MenuAppBar() {
   const classes = useStyles();

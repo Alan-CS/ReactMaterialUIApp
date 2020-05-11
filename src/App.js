@@ -1,25 +1,9 @@
 import React from 'react';
-import { Link as RouterLink } from "react-router-dom";
 
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Link from '@material-ui/core/Link';
 import ProTip from './ProTip';
-
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        {/*No text here*/}
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 export default function App() {
   return (
@@ -43,7 +27,6 @@ export default function App() {
           </div>
         </Typography>
         <ProTip />
-        <Copyright />
       </Box>
     </Container>
   );
