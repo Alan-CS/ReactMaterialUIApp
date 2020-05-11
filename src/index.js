@@ -15,7 +15,7 @@ import theme from './theme';
 
 import App from './App';
 import Header from './components/Header';
-import HOCApiExamplePage from './components/HOCApiExamplePage';
+import ButtonsPage from './components/ButtonsPage';
 
 var hist = createBrowserHistory();
 
@@ -28,7 +28,7 @@ ReactDOM.render(
         <Header/>
         <Switch>
           <Route exact path="/" component={App} />
-          <Route path="/HOCApiExample" component={HOCApiExamplePage} />
+          <Route path="/Buttons" component={ButtonsPage} />
         </Switch>
       </React.Fragment>
   </Router>,

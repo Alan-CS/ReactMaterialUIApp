@@ -10,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import HomeIcon from '@material-ui/icons/Home';
 import AppsIcon from '@material-ui/icons/Apps';
+import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -121,7 +122,12 @@ export default function MenuAppBar() {
                 open={openApps}
                 onClose={handleCloseApps}
             >
-              <MenuItem onClick={handleCloseApps}>Buttons</MenuItem>
+              <MenuItem onClick={handleCloseApps}>
+                <Link underline="none" color="inherit" variant="body2" component={RouterLink} to="/Buttons">
+                  <RadioButtonCheckedIcon className={classes.iconAlign}/>
+                  Buttons
+                </Link>
+              </MenuItem>
               <MenuItem onClick={handleCloseApps}>Contacts</MenuItem>
             </Menu>
           </div>

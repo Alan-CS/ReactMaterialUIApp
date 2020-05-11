@@ -7,10 +7,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 
-import HOCApiExample from './HOCApiExample';
+import Buttons from './Buttons';
+import {Theme as theme} from "@material-ui/core/styles/createMuiTheme";
 
 // Taken from https://material-ui.com/styles/basics/#hook-api
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     border: 0,
@@ -20,7 +21,10 @@ const useStyles = makeStyles({
     height: 48,
     padding: '0 30px',
   },
-});
+  topDiv: {
+    marginTop: theme.spacing(2)
+  }
+}));
 
 export default function () {
   const classes = useStyles();
@@ -28,21 +32,24 @@ export default function () {
 
   return (
     <Container maxWidth="sm">
+      <div className={classes.topDiv}>
+        <h1>Sample Buttons</h1>
+      </div>
+
+      {/*Alan: cannot prevent underlining*/}
       <Button className={classes.root}>
-          <Link to="/">{"Home"}</Link>
+          <Link variant="body2" underline="none" to="/">{"Home"}</Link>
       </Button>
         <br>
         </br>
         <br>
         </br>
-        <div>
-          Test Div
-        </div>
+
         <br>
         </br>
         <br>
         </br>
-        <HOCApiExample> Alan Button </HOCApiExample>
+        <Buttons> Standard Button </Buttons>
     </Container>
   )
 }
