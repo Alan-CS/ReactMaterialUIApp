@@ -9,6 +9,8 @@ import Container from '@material-ui/core/Container';
 
 import Buttons from './Buttons';
 import {Theme as theme} from "@material-ui/core/styles/createMuiTheme";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 
 // Taken from https://material-ui.com/styles/basics/#hook-api
 const useStyles = makeStyles((theme) => ({
@@ -32,18 +34,23 @@ export default function () {
 
   return (
     <Container maxWidth="sm">
-      <div className={classes.topDiv}>
-        <h1>Sample Buttons</h1>
-      </div>
+      <Box my={4}>
+        <Typography variant="h4" component="h1" gutterBottom color="primary">
+          Sample Buttons
+        </Typography>
 
-      <h2> A button with a link</h2>
-      {/*Alan: cannot prevent underlining*/}
-      <Button className={classes.root}>
-          <Link variant="body2" underline="none" to="/">{"Home"}</Link>
-      </Button>
+        <Typography color="textSecondary">
+          <h3> A button with a link</h3>
+          {/*Alan: cannot prevent underlining*/}
+          <Button className={classes.root}>
+            <Link variant="body2" underline="none" to="/">{"Home"}</Link>
+          </Button>
 
-      <h2> A Standard Styled Button</h2>
-      <Buttons> Standard Button </Buttons>
+          <h3> A Standard Styled Button</h3>
+          <Buttons> Standard Button </Buttons>
+
+        </Typography>
+      </Box>
     </Container>
   )
 }
