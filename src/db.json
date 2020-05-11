@@ -1,0 +1,113 @@
+{
+	"contacts": [
+		{
+			"James",
+			"Martha",
+			"P.O. Box 734, 8851 Nec Street",
+			"Bloomington",
+			"Oman",
+			"Nulla.interdum@et.net"
+		},
+		{
+			"Ignatius",
+			"Alika",
+			"P.O. Box 458, 6082 Metus Avenue",
+			"Marburg",
+			"Maldives",
+			"Cras@aliquetodioEtiam.ca"
+		},
+		{
+			"Tobias",
+			"Sharon",
+			"9770 Augue Avenue",
+			"Rocca San Felice",
+			"Panama",
+			"Sed.et@luctus.org"
+		},
+		{
+			"Asher",
+			"Mercedes",
+			"797-4878 Pharetra. Street",
+			"Bielefeld",
+			"New Caledonia",
+			"pharetra.sed@nulla.co.uk"
+		},
+		{
+			"Thane",
+			"Maya",
+			"P.O. Box 630, 9489 Nec Rd.",
+			"Pichilemu",
+			"Tunisia",
+			"Quisque@vitaesodalesat.com"
+		},
+		{
+			"Sylvester",
+			"Yuri",
+			"P.O. Box 840, 5825 Adipiscing Street",
+			"Stigliano",
+			"Estonia",
+			"Cras@aliquetmagnaa.org"
+		},
+		{
+			"Bevis",
+			"Moana",
+			"5035 Accumsan St.",
+			"Hallaar",
+			"Haiti",
+			"tortor.at@gravidamaurisut.net"
+		},
+		{
+			"Cairo",
+			"Nora",
+			"Ap #889-4022 Scelerisque St.",
+			"Gatchina",
+			"Djibouti",
+			"tincidunt.Donec.vitae@nullaIntegervulputate.co.uk"
+		},
+		{
+			"Cruz",
+			"Nevada",
+			"276-2606 Placerat Road",
+			"Talence",
+			"Maldives",
+			"nisl.sem@mollis.edu"
+		},
+		{
+			"Coby",
+			"Vanna",
+			"P.O. Box 113, 8429 At Rd.",
+			"Thatta",
+			"Wallis and Futuna",
+			"nec@gravidaPraesent.edu"
+		},
+		{
+			"Keegan",
+			"Brianna",
+			"975-7595 Eu, Ave",
+			"Williams Lake",
+			"Iceland",
+			"Nullam.feugiat@loremipsumsodales.edu"
+		},
+	],
+    "users": [
+    {
+      "id": 1,
+      "name": "Mark"
+    },
+    {
+      "id": 2,
+      "name": "Simon"
+    },
+    {
+      "id": 3,
+      "name": "Clarisse"
+    },
+    {
+      "id": 4,
+      "name": "Sanjiv"
+    }
+  ],
+  "sessions": [],
+  "bookings": []
+}
+  
