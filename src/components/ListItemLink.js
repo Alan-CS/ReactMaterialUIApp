@@ -2,8 +2,9 @@
 // https://material-ui.com/guides/composition
 // https://material-ui.com/guides/composition/#caveat-with-inlining
 // Below code taken from "List" inline sandbox
-// https://material-ui.com/guides/composition/#list 
+// https://material-ui.com/guides/composition/#list
 
+/* Not used anymore
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -30,7 +31,7 @@ function ListItemLink(props) {
       () => React.forwardRef((itemProps, ref) => <RouterLink to={to} ref={ref} {...itemProps} />),
       [to],
     );
-  
+
     return (
       <li>
         <ListItem innerDivStyle={{paddingLeft: 20}} button disableGutters component={renderLink}>
@@ -40,7 +41,7 @@ function ListItemLink(props) {
       </li>
     );
   }
-  
+
 
   ListItemLink.propTypes = {
     icon: PropTypes.element,
@@ -49,3 +50,5 @@ function ListItemLink(props) {
   };
 
   export default ListItemLink;
+
+ */
