@@ -84,7 +84,7 @@ export default function MenuAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" >
-            Material UI Samples
+            Material UI CRA
           </Typography>
           <Typography variant="h6" className={classes.toolbarItem}>
             <Link underline="none" color="inherit" variant="body2" component={RouterLink} to="/">
