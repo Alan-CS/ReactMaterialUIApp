@@ -17,6 +17,7 @@ import App from './App';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ButtonsPage from './components/ButtonsPage';
+import ContactsPage from './components/ContactsPage';
 
 var hist = createBrowserHistory();
 
@@ -30,6 +31,7 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/" component={App} />
           <Route path="/Buttons" component={ButtonsPage} />
+          <Route path="/Contacts" component={ContactsPage} />
         </Switch>
         <Footer/>
       </React.Fragment>

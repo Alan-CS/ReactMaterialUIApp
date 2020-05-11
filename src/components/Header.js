@@ -126,7 +126,12 @@ export default function MenuAppBar() {
                   Buttons
                 </Link>
               </MenuItem>
-              <MenuItem onClick={handleCloseApps}>Contacts</MenuItem>
+              <MenuItem onClick={handleCloseApps}>
+                <Link underline="none" color="inherit" variant="body2" component={RouterLink} to="/Contacts">
+                  <RadioButtonCheckedIcon className={classes.iconAlign}/>
+                  Contacts
+                </Link>
+              </MenuItem>
             </Menu>
           </div>
 
