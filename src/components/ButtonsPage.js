@@ -36,20 +36,14 @@ export default function () {
         <h1>Sample Buttons</h1>
       </div>
 
+      <h2> A button with a link</h2>
       {/*Alan: cannot prevent underlining*/}
       <Button className={classes.root}>
           <Link variant="body2" underline="none" to="/">{"Home"}</Link>
       </Button>
-        <br>
-        </br>
-        <br>
-        </br>
 
-        <br>
-        </br>
-        <br>
-        </br>
-        <Buttons> Standard Button </Buttons>
+      <h2> A Standard Styled Button</h2>
+      <Buttons> Standard Button </Buttons>
     </Container>
   )
 }
