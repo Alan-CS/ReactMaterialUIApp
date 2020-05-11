@@ -25,14 +25,14 @@ export default function App() {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom color="primary">
+        <Typography variant="h5"  gutterBottom color="primary">
           A Material-UI based React App
         </Typography>
         <Typography color="textSecondary">
           <div>
-            <h3>
+            <h4>
               This app has the following features
-            </h3>
+            </h4>
             <ul>
               <li> It is Create React App based </li>
               <li> It is built using the Material-UI toolkit</li>

@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme) => ({
     height: 48,
     padding: '0 30px',
   },
-  topDiv: {
-    marginTop: theme.spacing(2)
+  topMarginStyledButton: {
+    marginTop: theme.spacing(5)
   }
 }));
 
@@ -35,18 +35,18 @@ export default function () {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom color="primary">
+        <Typography variant="h5" component="h1" gutterBottom color="primary">
           Sample Buttons
         </Typography>
 
         <Typography color="textSecondary">
-          <h3> A button with a link</h3>
+          <h4> A button with a link</h4>
           {/*Alan: cannot prevent underlining*/}
           <Button className={classes.root}>
             <Link variant="body2" underline="none" to="/">{"Home"}</Link>
           </Button>
 
-          <h3> A Standard Styled Button</h3>
+          <h4 className={classes.topMarginStyledButton}> A Standard Styled Button</h4>
           <Buttons> Standard Button </Buttons>
 
         </Typography>
