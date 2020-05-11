@@ -9,6 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import HomeIcon from '@material-ui/icons/Home';
+import AppsIcon from '@material-ui/icons/Apps';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -50,6 +51,8 @@ export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const [anchorElApps, setAnchorElApps] = React.useState(null);
+  const openApps = Boolean(anchorElApps);
 
   const handleChange = (event) => {
     setAuth(event.target.checked);
@@ -63,6 +66,14 @@ export default function MenuAppBar() {
     setAnchorEl(null);
   };
 
+  const handleMenuApps = (event) => {
+    setAnchorElApps(event.currentTarget);
+  };
+
+  const handleCloseApps = () => {
+    setAnchorElApps(null);
+  };
+
   return (
     <div className={classes.root}>
 
@@ -72,7 +83,7 @@ export default function MenuAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" >
-            Photos
+            Material UI Samples
           </Typography>
           <Typography variant="h6" className={classes.toolbarItem}>
             <Link underline="none" color="inherit" variant="body2" component={RouterLink} to="/">
@@ -84,8 +95,39 @@ export default function MenuAppBar() {
 
           {/*<NavBar className={classes.title}/>*/}
 
+          {/* Alan: Push this to the right of the appbar */}
+          <div className={classes.right}>
+            <IconButton
+                aria-label="Apps"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleMenuApps}
+                color="inherit"
+            >
+              <AppsIcon />
+            </IconButton>
+            <Menu
+                id="menu-appbar"
+                anchorEl={anchorElApps}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={openApps}
+                onClose={handleCloseApps}
+            >
+              <MenuItem onClick={handleCloseApps}>Buttons</MenuItem>
+              <MenuItem onClick={handleCloseApps}>Contacts</MenuItem>
+            </Menu>
+          </div>
+
           {/* Alan: Moved this here from the top and pushed it to the right of the appbar */}
-          <FormGroup className={classes.right}>
+          <FormGroup >
             <FormControlLabel
                 control={<Switch checked={auth} onChange={handleChange} aria-label="login switch"/>}
                 label={auth ? 'Logout' : 'Login'}
