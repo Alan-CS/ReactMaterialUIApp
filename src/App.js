@@ -26,15 +26,18 @@ export default function App() {
     <Container maxWidth="sm">
       <Box my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Create React App v4-beta example
+          A Material-UI based React App
         </Typography>
         <div>
           <h2>
-            Click on one of the example components below
+            This app has the following features
           </h2>
           <ul>
-            <li> <RouterLink to="/HOCApiExample">{"HOCApiExamplePage"}</RouterLink></li>
-            <li> <RouterLink to="/">{"HOME"}</RouterLink></li>
+            <li> It is Create React App based </li>
+            <li> It is built using the Material-UI toolkit</li>
+            <li> It does routing using React Router </li>
+            <li> It does forms validation using Formik forms </li>
+            <li> It also uses YUP for driving forms validation logic </li>
           </ul>
         </div>
         <ProTip />
