@@ -1,22 +1,24 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import HomeIcon from '@material-ui/icons/Home';
+import AppBar from '@material-ui/core/AppBar';
 import AppsIcon from '@material-ui/icons/Apps';
-import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
-import Switch from '@material-ui/core/Switch';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import ContactsIcon from '@material-ui/icons/Contacts';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
+import HomeIcon from '@material-ui/icons/Home';
+import IconButton from '@material-ui/core/IconButton';
 import Link from '@material-ui/core/Link';
+import Menu from '@material-ui/core/Menu';
+import MenuIcon from '@material-ui/icons/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
+import Switch from '@material-ui/core/Switch';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,6 +40,15 @@ const useStyles = makeStyles((theme) => ({
   iconAlign: {
     verticalAlign: 'middle',
     paddingBottom: '4px',
+  },
+  menuIconAlign: {
+    verticalAlign: 'middle',
+    paddingBottom: '4px',
+    marginRight: '0.5em'
+  },
+  appIcon: {
+    verticalAlign: 'bottom',
+    marginLeft: '4px'
   }
 }));
 
@@ -104,6 +115,10 @@ export default function MenuAppBar() {
                 color="inherit"
             >
               <AppsIcon />
+              <Typography variant="body2" className={classes.appIcon}>
+                Apps
+              </Typography>
+
             </IconButton>
             <Menu
                 id="menu-appbar"
@@ -122,14 +137,20 @@ export default function MenuAppBar() {
             >
               <MenuItem onClick={handleCloseApps}>
                 <Link underline="none" color="inherit" variant="body2" component={RouterLink} to="/Buttons">
-                  <RadioButtonCheckedIcon className={classes.iconAlign}/>
+                  <RadioButtonCheckedIcon color="primary" className={classes.menuIconAlign}/>
                   Buttons
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleCloseApps}>
                 <Link underline="none" color="inherit" variant="body2" component={RouterLink} to="/Contacts">
-                  <RadioButtonCheckedIcon className={classes.iconAlign}/>
+                  <ContactsIcon color="primary" className={classes.menuIconAlign}/>
                   Contacts
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleCloseApps}>
+                <Link underline="none" color="inherit" variant="body2" component={RouterLink} to="/ContactForm">
+                  <ContactMailIcon color="primary" className={classes.menuIconAlign}/>
+                  SendEmail
                 </Link>
               </MenuItem>
             </Menu>
