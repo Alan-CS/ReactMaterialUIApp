@@ -14,10 +14,11 @@ import { ThemeProvider } from '@material-ui/styles';
 import theme from './theme';
 
 import App from './App';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import ButtonsPage from './components/ButtonsPage';
+import ContactForm from './components/ContactForm';
 import ContactsPage from './components/ContactsPage';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 var hist = createBrowserHistory();
 
@@ -32,6 +33,7 @@ ReactDOM.render(
           <Route exact path="/" component={App} />
           <Route path="/Buttons" component={ButtonsPage} />
           <Route path="/Contacts" component={ContactsPage} />
+          <Route path="/ContactForm" component={ContactForm} />
         </Switch>
         <Footer/>
       </React.Fragment>
