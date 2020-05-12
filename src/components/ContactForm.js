@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-
 export default function ContactForm() {
 
   const classes = useStyles();
@@ -38,10 +37,12 @@ export default function ContactForm() {
     message: Yup.string().required('Required'),
   });
 
-  const submitHandler = (values, {setSubmitting}) => {
+  const submitHandler = (values, {setSubmitting, resetForm}) => {
     setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
+      // alert(JSON.stringify(values, null, 2));
+      alert("Your message has been sent. Thank you for contacting us!!")
       setSubmitting(false);
+      resetForm();
     }, 400);
   };
 
@@ -131,8 +132,7 @@ export default function ContactForm() {
                   <Button
                     color="primary"
                     disabled={isSubmitting}
-                    onClick={handleReset}
-                    type="button"
+                    type="submit"
                     variant="contained"
                   >
                     Send Message
