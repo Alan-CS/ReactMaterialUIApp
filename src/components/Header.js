@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom';
 
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import AppBar from '@material-ui/core/AppBar';
@@ -18,7 +18,7 @@ import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import Switch from '@material-ui/core/Switch';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -90,11 +90,13 @@ export default function MenuAppBar() {
       <AppBar position="static">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
+            <MenuIcon/>
           </IconButton>
-          <Typography variant="h6" >
+
+          <Typography variant="h6">
             Material UI CRA
           </Typography>
+
           <Typography variant="h6" className={classes.toolbarItem}>
             <Link underline="none" color="inherit" variant="body2" component={RouterLink} to="/">
               <HomeIcon className={classes.iconAlign}/>
@@ -102,38 +104,35 @@ export default function MenuAppBar() {
             </Link>
           </Typography>
 
-
-          {/*<NavBar className={classes.title}/>*/}
-
           {/* Alan: Push this to the right of the appbar */}
           <div className={classes.right}>
             <IconButton
-                aria-label="Apps"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleMenuApps}
-                color="inherit"
+              aria-label="Apps"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleMenuApps}
+              color="inherit"
             >
-              <AppsIcon />
+              <AppsIcon/>
               <Typography variant="body2" className={classes.appIcon}>
                 Apps
               </Typography>
 
             </IconButton>
             <Menu
-                id="menu-appbar"
-                anchorEl={anchorElApps}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={openApps}
-                onClose={handleCloseApps}
+              id="menu-appbar"
+              anchorEl={anchorElApps}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={openApps}
+              onClose={handleCloseApps}
             >
               <MenuItem onClick={handleCloseApps}>
                 <Link underline="none" color="inherit" variant="body2" component={RouterLink} to="/Buttons">
@@ -157,12 +156,13 @@ export default function MenuAppBar() {
           </div>
 
           {/* Alan: Moved this here from the top and pushed it to the right of the appbar */}
-          <FormGroup >
+          <FormGroup>
             <FormControlLabel
-                control={<Switch checked={auth} onChange={handleChange} aria-label="login switch"/>}
-                label={auth ? 'Logout' : 'Login'}
+              control={<Switch checked={auth} onChange={handleChange} aria-label="login switch"/>}
+              label={auth ? 'Logout' : 'Login'}
             />
           </FormGroup>
+
           {auth && (
             <div>
               <IconButton
@@ -172,7 +172,7 @@ export default function MenuAppBar() {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <AccountCircle />
+                <AccountCircle/>
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -194,6 +194,7 @@ export default function MenuAppBar() {
               </Menu>
             </div>
           )}
+
         </Toolbar>
       </AppBar>
     </div>
