@@ -10,9 +10,10 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Container from "@material-ui/core/Container";
 import {Grid, Typography} from "@material-ui/core";
 
+import Contact from "./Contact"
 import data from "../db";
 
-function Contact(id, image, firstname, lastname, address, city, country, email) {
+function ContactOld(id, image, firstname, lastname, address, city, country, email) {
   return (
     <Grid item key={id}>
       <Card>
