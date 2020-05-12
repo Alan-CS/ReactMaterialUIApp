@@ -15,9 +15,14 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  buttonDiv: {
+    marginTop: '2em',
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
   paraText: {
     marginTop: '1.5em',
-    marginBottom: '1.5em',
   }
 }));
 
@@ -114,19 +119,30 @@ export default function ContactForm() {
                     />
                   </Grid>
                   <Grid item xs={12} sm={4} md={4}>
-                    <Button
-                      type="button"
-                      className="outline"
-                      onClick={handleReset}
-                      disabled={!dirty || isSubmitting}
-                    >
-                      Reset
-                    </Button>
+                    <div className={classes.buttonDiv}>
+                      <Button
+                        color="secondary"
+                        disabled={!dirty || isSubmitting}
+                        onClick={handleReset}
+                        type="button"
+                        variant="contained"
+                      >
+                        Reset
+                      </Button>
+                    </div>
                   </Grid>
                   <Grid item xs={12} sm={4} md={4}>
-                    <Button color="primary" type="submit" disabled={isSubmitting}>
-                      Send Message
-                    </Button>
+                    <div className={classes.buttonDiv}>
+                      <Button
+                        color="primary"
+                        disabled={isSubmitting}
+                        onClick={handleReset}
+                        type="button"
+                        variant="contained"
+                      >
+                        Send Message
+                      </Button>
+                    </div>
                   </Grid>
                 </Grid>
               </form>
