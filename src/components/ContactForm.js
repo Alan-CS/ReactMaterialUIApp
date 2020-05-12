@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  paraText: {
+    marginTop: '1.5em',
+    marginBottom: '1.5em',
+  }
 }));
 
 
@@ -43,6 +47,9 @@ export default function ContactForm() {
         <Typography variant="h5" gutterBottom color="primary">
           Get in touch with us
         </Typography>
+        <Typography className={classes.paraText} variant="body1" gutterBottom color="secondary">
+          Please provide us the information below and we will get in touch with you at the earliest.
+        </Typography>
 
           <Formik
             initialValues={initialValues}
@@ -66,47 +73,44 @@ export default function ContactForm() {
               return (
                 <form onSubmit={handleSubmit}>
                   <Grid container >
-                    <Grid item xs={12} sm={6} md={6}>
+                    <Grid item xs={12} sm={6}>
                       <TextField
-                        labelText="Your Name"
-                        id="name"
-                        name="name"
-                        value={values.name}
+                        className={classes.input}
                         error={errors.name && touched.name}
+                        helperText={errors.name && touched.name && errors.name}
+                        label="Your Name"
+                        margin="normal"
+                        name="name"
+                        onBlur={handleBlur}
                         onChange={handleChange}
-                        helperText={(errors.name && touched.name) && errors.name}
-                        inputProps={{
-                          error: errors.name && touched.name,
-                          helperText: 'Is required'
-                        }}
-                        formControlProps={{
-                          fullWidth: true,
-                          helperText: 'Is required',
-                          onBlur: handleBlur
-                        }}
+                        value={values.name}
                       />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={6}>
+                    <Grid item xs={12} sm={6}>
                       <TextField
-                        labelText="Your Email"
-                        id="email"
-                        formControlProps={{
-                          fullWidth: true
-                        }}
+                        className={classes.input}
+                        error={errors.email && touched.email}
+                        helperText={errors.email && touched.email && errors.email}
+                        label="Your Email"
+                        margin="normal"
+                        name="email"
+                        onBlur={handleBlur}
+                        onChange={handleChange}
+                        value={values.email}
                       />
                     </Grid>
                     <Grid item xs={12}>
                     <TextField
-                      labelText="Your Message"
-                      id="message"
-                      formControlProps={{
-                        fullWidth: true,
-                        className: classes.textArea
-                      }}
-                      inputProps={{
-                        multiline: true,
-                        rows: 5
-                      }}
+                      className={classes.textarea}
+                      error={errors.message && touched.message}
+                      fullWidth
+                      helperText={errors.message && touched.message && errors.message}
+                      label="Your Message"
+                      margin="normal"
+                      name="message"
+                      onBlur={handleBlur}
+                      onChange={handleChange}
+                      value={values.message}
                     />
                     </Grid>
                     <Grid item xs={12} sm={4} md={4}>
