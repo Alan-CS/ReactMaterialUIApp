@@ -8,7 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import {Grid, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
-import {ErrorMessage, Field, Formik, Form} from 'formik';
+import {Formik} from 'formik';
 import * as Yup from 'yup';
 
 const useStyles = makeStyles((theme) => ({
@@ -61,9 +61,7 @@ export default function ContactForm() {
           onSubmit={submitHandler}
           validationSchema={validationSchema}
         >
-          {(props) => {
-
-            const {
+          {({
               dirty,
               errors,
               handleBlur,
@@ -73,81 +71,77 @@ export default function ContactForm() {
               isSubmitting,
               touched,
               values,
-            } = props;
-
-            return (
-              <form onSubmit={handleSubmit}>
-                <Grid container>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      className={classes.input}
-                      error={errors.name && touched.name}
-                      helperText={errors.name && touched.name && errors.name}
-                      label="Your Name"
-                      margin="normal"
-                      name="name"
-                      onBlur={handleBlur}
-                      onChange={handleChange}
-                      value={values.name}
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      className={classes.input}
-                      error={errors.email && touched.email}
-                      helperText={errors.email && touched.email && errors.email}
-                      label="Your Email"
-                      margin="normal"
-                      name="email"
-                      onBlur={handleBlur}
-                      onChange={handleChange}
-                      value={values.email}
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      className={classes.textarea}
-                      error={errors.message && touched.message}
-                      fullWidth
-                      helperText={errors.message && touched.message && errors.message}
-                      label="Your Message"
-                      margin="normal"
-                      name="message"
-                      onBlur={handleBlur}
-                      onChange={handleChange}
-                      value={values.message}
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={4} md={4}>
-                    <div className={classes.buttonDiv}>
-                      <Button
-                        color="secondary"
-                        disabled={!dirty || isSubmitting}
-                        onClick={handleReset}
-                        type="button"
-                        variant="contained"
-                      >
-                        Reset
-                      </Button>
-                    </div>
-                  </Grid>
-                  <Grid item xs={12} sm={4} md={4}>
-                    <div className={classes.buttonDiv}>
-                      <Button
-                        color="primary"
-                        disabled={isSubmitting}
-                        onClick={handleReset}
-                        type="button"
-                        variant="contained"
-                      >
-                        Send Message
-                      </Button>
-                    </div>
-                  </Grid>
-                </Grid>
-              </form>
-            );
-          }}
+            }) => <form onSubmit={handleSubmit}>
+            <Grid container>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  className={classes.input}
+                  error={errors.name && touched.name}
+                  helperText={errors.name && touched.name && errors.name}
+                  label="Your Name"
+                  margin="normal"
+                  name="name"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.name}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  className={classes.input}
+                  error={errors.email && touched.email}
+                  helperText={errors.email && touched.email && errors.email}
+                  label="Your Email"
+                  margin="normal"
+                  name="email"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.email}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  className={classes.textarea}
+                  error={errors.message && touched.message}
+                  fullWidth
+                  helperText={errors.message && touched.message && errors.message}
+                  label="Your Message"
+                  margin="normal"
+                  name="message"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.message}
+                />
+              </Grid>
+              <Grid item xs={12} sm={4} md={4}>
+                <div className={classes.buttonDiv}>
+                  <Button
+                    color="secondary"
+                    disabled={!dirty || isSubmitting}
+                    onClick={handleReset}
+                    type="button"
+                    variant="contained"
+                  >
+                    Reset
+                  </Button>
+                </div>
+              </Grid>
+              <Grid item xs={12} sm={4} md={4}>
+                <div className={classes.buttonDiv}>
+                  <Button
+                    color="primary"
+                    disabled={isSubmitting}
+                    onClick={handleReset}
+                    type="button"
+                    variant="contained"
+                  >
+                    Send Message
+                  </Button>
+                </div>
+              </Grid>
+            </Grid>
+          </form>
+          }
         </Formik>
       </Box>
     </Container>
