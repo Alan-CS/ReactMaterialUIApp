@@ -24,7 +24,7 @@ export default function Contacts() {
         </Typography>
         <Grid style={{marginTop: 20}} container spacing={4}>
           {contacts.map(contact => (
-            <Grid item xs="12" sm="6">
+            <Grid item xs={12} sm={6} key={contact.id}>
               <Contact {...contact} />
             </Grid>
           ))}
