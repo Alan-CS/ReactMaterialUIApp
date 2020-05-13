@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 345,
   },
   media: {
-    height: 0,
+    height: 300,
     paddingTop: '56.25%', // 16:9
   },
   avatar: {
