@@ -9,22 +9,20 @@ export default function App() {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
-        <Typography variant="h5"  gutterBottom color="primary">
+        <Typography variant="h5" gutterBottom  color="primary">
           A Material-UI based React App
         </Typography>
-        <Typography color="textSecondary">
-          <div>
-            <h4>
+        <Typography style={{marginTop: '1em'}} variant="h6" color="textSecondary">
               This app has the following features
-            </h4>
+        </Typography>
+        <Typography variant="subtitle1" color="textSecondary">
             <ul>
-              <li> It is Create React App based </li>
+              <li> It is based on Create React App </li>
               <li> It is built using the Material-UI toolkit</li>
               <li> It does routing using React Router </li>
               <li> It does forms validation using Formik forms </li>
               <li> It also uses YUP for driving forms validation logic </li>
             </ul>
-          </div>
         </Typography>
         <ProTip />
       </Box>
